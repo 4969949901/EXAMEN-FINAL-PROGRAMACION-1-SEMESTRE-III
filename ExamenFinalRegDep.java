@@ -11,6 +11,8 @@ public class ExamenFinalRegDep {
         
         MenuRegistro ingreso= new MenuRegistro();
         ingreso.menuRegistroDepartamentos();
+      
+        
     }
     
 }

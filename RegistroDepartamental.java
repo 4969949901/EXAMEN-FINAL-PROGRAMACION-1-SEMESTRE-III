@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 
 public class RegistroDepartamental {
+    
+     Scanner intro =new Scanner (System.in);
     //atributos
     private String departamento;
     private int municipio;
@@ -26,28 +28,67 @@ public class RegistroDepartamental {
     }
     
     //metodo registro
-    Scanner intro =new Scanner (System.in);
+
+    public String getDepartamento() {
+        return departamento;
+    }
+
+    public void setDepartamento(String departamento) {
+        this.departamento = departamento;
+    }
+
+    public int getMunicipio() {
+        return municipio;
+    }
+
+    public void setMunicipio(int municipio) {
+        this.municipio = municipio;
+    }
+
+    public String getCabecera() {
+        return cabecera;
+    }
+
+    public void setCabecera(String cabecera) {
+        this.cabecera = cabecera;
+    }
+    
+    
+    
+    
+   
     public void registrarDep (){
         System.out.println( "*************************************");
         System.out.println( "Ingrese el Nombre del Departamento:");
-        departamento= intro.nextLine();
+        departamento= intro.nextLine();this.mostrar("Nombre del Departamentos", departamento);
         System.out.println( "*************************************\n");
+    }
+    
+    public void registrarMuni(){
         
         System.out.println( "*************************************");
         System.out.println( "Ingrese la cantidad de Municipios:");
-        municipio= intro.nextInt();
+        municipio= intro.nextInt();this.mostrarse("Cantidad de Municipios", municipio);
         System.out.println( "*************************************\n");
-        
+    }
+    
+    public void registrarCabe(){
         System.out.println( "*************************************");
         System.out.println( "Ingrese la Cabecera departamental:");
         cabecera= intro.nextLine(); cabecera= intro.nextLine();
+        this.mostrar("Cabecera Departamental", cabecera);
         System.out.println( "*************************************\n");
-        this.mostrar( departamento, municipio, cabecera);
+    
     }
 
-    public void mostrar ( String registroUno, int registroDos, String procesoCab){
+    public void mostrar ( String deta,String depa){
     contador=contador+1;
-    vectorDep[contador]= " "+registroUno+" "+registroDos+" "+procesoCab;
+    vectorDep[contador]="  "+deta+"  "+depa;
+    
+    }
+     public void mostrarse ( String deta,int depa){
+    contador=contador+1;
+    vectorDep[contador]="  "+deta+"  "+depa;
     
     }
     
